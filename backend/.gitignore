@@ -1,0 +1,13 @@
+
+# Python
+__pycache__/
+*.pyc
+*.pyd
+*.so
+.venv/
+.env
+
+# Distribution / Packaging
+backend.egg-info/
+dist/
+.env
