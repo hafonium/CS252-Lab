@@ -2,7 +2,7 @@
 **Please create and your *API Keys* to [example.env](./backend/example.env) file**
 
 ## Running backend server:
-### On [Google Colab]("https://colab.research.google.com/drive/17jN984bfbOVnO586GPcONOJFENUlBMi1?usp=sharing)  
+### On [Google Colab](https://colab.research.google.com/drive/17jN984bfbOVnO586GPcONOJFENUlBMi1?usp=sharing)
 ### On local machine:
 Install modules:
 ```bash
