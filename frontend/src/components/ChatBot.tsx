@@ -73,6 +73,11 @@ export default function ChatBot({ onSearchResults, currentCenter }: ChatBotProps
     // Add user message to chat
     setMessages((prev) => [...prev, { role: "user", content: userMessage }]);
 
+    // Clear previous search results from map when starting a new search
+    if (onSearchResults) {
+      onSearchResults([], 0, 0);
+    }
+
     try {
       // Use actual user location if available, otherwise fall back to map center
       const locationToUse = userLocation || currentCenter;

@@ -2,15 +2,11 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 
-# Load .env from backend directory - get absolute path
-backend_dir = Path(__file__).parent.parent.parent
-env_path = backend_dir / ".env"
+for env_file in Path.cwd().rglob("*.env"):
+    load_dotenv(env_file, override=True)
 
-# Force load with override
-load_dotenv(env_path, override=True)
-
-def load_env_variable(var_name: str) -> str:
+def load_env_variable(var_name: str) -> str | None:
     value = os.getenv(var_name)
-    if not value:
-        print(f"Warning: Environment variable {var_name} is not set.")
+    if value is None:
+        print(f"Warning: Environment variable '{var_name}' is not set.")
     return value

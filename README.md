@@ -1,10 +1,20 @@
-**Please check and add your *API Keys* to [.env](./frontend/.env) file**
-**Please check and add your *API Keys* to [.env](./backend/.env) file**
+**Please create and your *API Keys* to [example.env](./frontend/example.env) file**  
+**Please create and your *API Keys* to [example.env](./backend/example.env) file**
 
-## Please follow these instructions to run: 
+## Running backend server:
+### On [Google Colab]("https://colab.research.google.com/drive/17jN984bfbOVnO586GPcONOJFENUlBMi1?usp=sharing)  
+### On local machine:
+Install modules:
+```bash
+cd backend
+uv sync
+```
+Run:
+```bash
+uv run main.py
+```
 
-# Run backend:
-
+## Running frontend server:
 Install modules:
 ```bash
 npm install 
