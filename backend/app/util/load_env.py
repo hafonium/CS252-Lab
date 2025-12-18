@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 
-for env_file in Path.cwd().rglob("*.env"):
+for env_file in Path.cwd().rglob(".env"):
     load_dotenv(env_file, override=True)
 
 def load_env_variable(var_name: str) -> str | None:

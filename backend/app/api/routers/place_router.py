@@ -115,9 +115,9 @@ async def find_points_of_interest(request: POIRequest):
             for amenity_type in AMENITY_TYPES:
                 overpass_query = f"""
                     [out:json][timeout:30];
-                    nwr(around:{request.radius_m},{request.lat},{request.lng})["amenity"="{amenity_type}"];
+                    nwr(around:{request.radius_m},{request.lat},{request.lng})["amenity"];
                     out center;
-                """
+"""
                 
                 try:
                     response = await client.post(
