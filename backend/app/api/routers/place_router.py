@@ -117,7 +117,7 @@ async def find_points_of_interest(request: POIRequest):
                     [out:json][timeout:30];
                     nwr(around:{request.radius_m},{request.lat},{request.lng})["amenity"];
                     out center;
-"""
+                """
                 
                 try:
                     response = await client.post(
